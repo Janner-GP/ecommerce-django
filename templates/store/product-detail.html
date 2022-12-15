@@ -72,7 +72,7 @@
 {% if single_product.stock <= 0 %}
     <h5 class="text-center">Producto Agotado</h5>
 {% else %}
-    <a href="./product-detail.html" class="btn btn-primary text-center"> <span class="text-center">Agregar al carrito</span> <i class="fas fa-shopping-cart"></i>  </a>
+    <a href="{% url 'add_cart' single_product.id %}" class="btn btn-primary text-center"> <span class="text-center">Agregar al carrito</span> <i class="fas fa-shopping-cart"></i>  </a>
 {% endif %}
     
 </article> <!-- product-info-aside .// -->
